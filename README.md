@@ -4,6 +4,9 @@ Example-based unit tests made it easy to lock down bugs we could see coming, but
 
 When we test with properties, the design and growth of tests requires an equal part of growth and design of the program itself. A common pattern when a property fails will be to figure out if it’s the system that is wrong or if it’s our idea of what it should do that needs to change. We’ll fix bugs, but we’ll also fix our understanding of the problem space. We’ll be surprised by how things we thought we knew are far more complex and tricky than we thought, and how often it happens.
 
+## Elixir Notes
+* A piece of data of any data type is called a *term*.
+
 ## Setup
 Download dependencies
 ```
@@ -15,7 +18,12 @@ Run tests
 mix test
 ```
 
+Start console
+```
+MIX_ENV="test" iex -S mix
+```
+
 
 ## Upto
-Page 30
-Chapter 2
+Page 44
+Exercises
