@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 44
-Exercises
+Page 59
+Elixir translation on page 325
