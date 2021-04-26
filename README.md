@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 59
-Elixir translation on page 325
+Page 69
+Those are not very good results. Almost no keys are duplicated
