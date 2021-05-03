@@ -28,11 +28,50 @@ defmodule GeneratorsTest do
     end
   end
 
+  property "aggregate", [:verbose] do
+    suits = [:club, :diamond, :heart, :spade]
+
+    forall hand <- vector(5, {oneof(suits), choose(1, 13)}) do
+      aggregate(true, hand)
+    end
+  end
+
+  property "fake escaping test showcasing aggregation", [:verbose] do
+    forall str <- utf8() do
+      aggregate(escape(str), classes(str))
+    end
+  end
+
+  defp escape(_), do: true
+  def classes(str) do
+    l = letters(str)
+    n = numbers(str)
+    p = punctuation(str)
+    o = String.length(str) - (l+n+p)
+    [{:letters, to_range(5, l)},
+     {:numbers, to_range(5, n)},
+     {:punctuation, to_range(5, p)},
+     {:others, to_range(5, o)}]
+  end
+  def letters(str) do
+    is_letter = fn c -> (c >= ?a && c <= ?z) || (c >= ?A && c <= ?Z) end
+    length(for <<c::utf8 <- str>>, is_letter.(c), do: 1)
+  end
+  def numbers(str) do
+    is_num = fn c -> c >= ?0 && c <= ?9 end
+    length(for <<c::utf8 <- str>>, is_num.(c), do: 1)
+  end
+  def punctuation(str) do
+    is_punctuation = fn c -> c in '.,;:\'"-' end
+    length(for <<c::utf8 <- str>>, is_punctuation.(c), do: 1)
+  end
+
+
   def to_range(m, n) do
     base = div(n, m)
     {base * m, (base + 1) * m}
   end
 
-  def key(), do: integer()
+  def key(), do: oneof([range(1,10), integer()])
   def val(), do: term()
 end

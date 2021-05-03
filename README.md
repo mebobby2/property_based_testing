@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 69
-Those are not very good results. Almost no keys are duplicated
+Page 73
+Basic Custom Generators
