@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 113
-Elixir translation on page 326.
+Page 115
+The Erlang suite can be run with rebar3 eunit as well as rebar3 proper.
