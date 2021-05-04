@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 115
-The Erlang suite can be run with rebar3 eunit as well as rebar3 proper.
+Page 119
+The data being generated is stored in
