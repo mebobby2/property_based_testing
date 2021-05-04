@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 73
-Basic Custom Generators
+Page 113
+Elixir translation on page 326.
