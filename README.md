@@ -25,5 +25,7 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 119
-The data being generated is stored in
+Page 129
+You can also see that we reuse the previously defined
+
+Before that: understand this line: IO.chardata_to_string(:io_lib.format(" ~w/~2..0w/~2..0w", [y, m, d]))
