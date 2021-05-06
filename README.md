@@ -25,7 +25,7 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 129
-You can also see that we reuse the previously defined
+Page 142
+Wrapping Up
 
-Before that: understand this line: IO.chardata_to_string(:io_lib.format(" ~w/~2..0w/~2..0w", [y, m, d]))
+Before that: debug why the program crashes
