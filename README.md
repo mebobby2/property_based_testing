@@ -27,5 +27,3 @@ MIX_ENV="test" iex -S mix
 ## Upto
 Page 142
 Wrapping Up
-
-Before that: debug why the program crashes
