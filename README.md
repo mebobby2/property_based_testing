@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 142
-Wrapping Up
+Page 149
+Now that we have a working property
