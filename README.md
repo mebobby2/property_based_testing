@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 149
-Now that we have a working property
+Page 158
+Implementing Specials
