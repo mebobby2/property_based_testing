@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 158
-Implementing Specials
+Page 166
+Calibrating Negative Properties
