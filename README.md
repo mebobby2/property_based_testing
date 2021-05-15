@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 218
-Testing a Basic Concurrent Cache
+Page 223
+Building the Model
