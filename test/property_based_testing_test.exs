@@ -65,47 +65,47 @@ defmodule PropertyBasedTestingTest do
       encoded = encode(data)
       is_binary(encoded) and data == decode(encoded)
     end
-  end
 
+  end
   def encode(t), do: :erlang.term_to_binary(t)
   def decode(t), do: :erlang.binary_to_term(t)
 
-  def strdatetime() do
-    let(date_time <- datetime(), do: to_str(date_time))
-  end
+  # def strdatetime() do
+  #   let(date_time <- datetime(), do: to_str(date_time))
+  # end
 
-  def datetime() do
-    {date(), time(), timezone()}
-  end
+  # def datetime() do
+  #   {date(), time(), timezone()}
+  # end
 
-  def month(), do: range(1, 12)
-  def day(), do: range(1, 31)
-  def time(), do: {range(0, 24), range(0, 59), range(0, 60)}
+  # def month(), do: range(1, 12)
+  # def day(), do: range(1, 31)
+  # def time(), do: {range(0, 24), range(0, 59), range(0, 60)}
 
-  def timezone() do
-    {elements([:+, :-]), shrink(range(0, 99), [range(0, 14), 0]),
-     shrink(range(0, 99), [0, 15, 30, 45])}
-  end
+  # def timezone() do
+  #   {elements([:+, :-]), shrink(range(0, 99), [range(0, 14), 0]),
+  #    shrink(range(0, 99), [0, 15, 30, 45])}
+  # end
 
-  def to_str({{y, m, d}, {h, mi, s}, {sign, ho, mo}}) do
-    format_str = "~4..0b-~2..0b-~2..0bT~2..0b:~2..0b:~2..0b~s~2..0b:~2..0b"
+  # def to_str({{y, m, d}, {h, mi, s}, {sign, ho, mo}}) do
+  #   format_str = "~4..0b-~2..0b-~2..0bT~2..0b:~2..0b:~2..0b~s~2..0b:~2..0b"
 
-    :io_lib.format(format_str, [y, m, d, h, mi, s, sign, ho, mo])
-    |> to_string()
-  end
+  #   :io_lib.format(format_str, [y, m, d, h, mi, s, sign, ho, mo])
+  #   |> to_string()
+  # end
 
-  def tree_shrink(n) when n <= 1 do
-    {:left, number()}
-  end
+  # def tree_shrink(n) when n <= 1 do
+  #   {:left, number()}
+  # end
 
-  def tree_shrink(n) do
-    per_branch = div(n, 2)
+  # def tree_shrink(n) do
+  #   per_branch = div(n, 2)
 
-    let_shrink([
-      left <- tree_shrink(per_branch),
-      right <- tree_shrink(per_branch)
-    ]) do
-      {:branch, left, right}
-    end
-  end
+  #   let_shrink([
+  #     left <- tree_shrink(per_branch),
+  #     right <- tree_shrink(per_branch)
+  #   ]) do
+  #     {:branch, left, right}
+  #   end
+  # end
 end

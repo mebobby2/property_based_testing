@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 223
-Building the Model
+Page 230
+Replace the init/1 function with this one
