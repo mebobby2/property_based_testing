@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 241
-Chapter 10
+Page 246
+Application Code
