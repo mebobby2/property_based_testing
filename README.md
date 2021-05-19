@@ -25,5 +25,5 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 246
-Application Code
+Page 252
+This is all that we need for our application to work at a basic level, and more than enough for us to test
