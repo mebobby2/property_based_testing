@@ -25,5 +25,8 @@ MIX_ENV="test" iex -S mix
 
 
 ## Upto
-Page 261
-Right now, it seems like the calls tend to all succeed
+Page 274
+Let’s see what kind of bugs we get with the bookstore
+
+Before that:
+Run the tests (mix test) and try fixing the bugs found yourself. It's hard to follow along with the book while fixing the tests because property tests are probabilistic
