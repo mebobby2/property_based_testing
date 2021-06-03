@@ -22,8 +22,3 @@ Start console
 ```
 MIX_ENV="test" iex -S mix
 ```
-
-
-## Upto
-Page 289
-Chapter 11
